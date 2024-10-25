@@ -1,0 +1,24 @@
+ <!-- Firebase App is always required and must be first
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBEbv1hyyS7pyOsdmMTmRyxD1qL4gTl6Uo",
+            authDomain: "smartenergymonitoringsystem.firebaseapp.com",
+            databaseURL: "https://smartenergymonitoringsystem.firebaseio.com",
+            projectId: "smartenergymonitoringsystem",
+            storageBucket: "",
+            messagingSenderId: "598117923062",
+            appId: "1:598117923062:web:b27d826b35a1d38512d4d7"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script> -->

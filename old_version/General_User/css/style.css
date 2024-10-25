@@ -1,0 +1,29 @@
+.card-title{
+    text-align: center;
+}
+
+h1{
+    text-align: center !important;
+}
+
+.dbtn{
+    margin-top: 20px;
+}
+
+#yrow{
+    position: relative;
+    display: block;
+}
+
+.navbar-dark{
+   margin-top: -89px;
+}
+
+table{
+    margin-top: 20px;
+}
+
+#studentRecordCard, .card-body{
+    padding:10px;
+    box-shadow: 0 5px 5px 0 grey;
+}

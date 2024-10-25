@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Team Lists</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+
+        <div class="jumbotron col-md-12">
+       <img class="card-img-top" src="images/emulogo.png" alt="logo image" style="width:100%">
+    </div>
+
+    
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Links -->
+        <ul class="navbar-nav">
+
+            <li class="nav-item">
+                <a class="nav-link" href="home.html">Home</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    View
+                </a>
+                <div class="dropdown-menu"  id="mainNavbar">
+                    <a class="dropdown-item" href="teams.html">Teams</a>
+                    <a class="dropdown-item" href="judges.html">Judges</a>
+                </div>
+            </li>
+
+            <!--<li class="nav-item">
+                <a class="nav-link" href="addStudent.html">Add Student</a>
+            </li>
+
+            <li class="nav-item" id="addAccount">
+				<a class="nav-link" href="addUser.html">Add Account</a>
+            </li>-->
+			
+			<li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Add Account
+                </a>
+                <div class="dropdown-menu"  id="mainNavbar">
+                    <a class="dropdown-item" href="addteams.html">Add Teams</a>
+                    <a class="dropdown-item" href="addjudges.html">Add Judges</a>
+                </div>
+            </li>
+			
+			<li class="nav-item">
+                <a class="nav-link" href="assign_team_judge.html">Assign Teams vs Judges</a>
+            </li>
+
+            <li class="nav-item">
+                <button type="button" id="signout-btn" onclick="signOutUser()" style="margin-left:100px;" class="btn btn-danger"> SignOut </button>
+            </li>
+        </ul>
+    </nav>
+
+    <br>
+    <div class="container d-flex justify-content-left col-md-12">
+        <div class="col-12">
+            <table class="table">
+                <thead class="thead-dark" id="table">
+                    <tr>
+						<th scope="col">Team ID</th>
+                        <th scope="col">Team Name</th>
+                        <th scope="col">Team Mentor</th>
+                        <th scope="col">Video Pitch</th>
+                        <th scope="col">LogBook</th>
+						<th scope="col">Team Members</th>
+                        <th> View Details</th>
+                    </tr>
+                </thead>
+				<tbody> 
+											
+												<tr> 
+													<td>1</td> 
+													<td>Soft Speak</td> 
+													<td>Steve Rhode</td> 
+													<td><a href ="https://www.youtube.com/watch?v=sA9DwvbQ-hI">Soft Speak-Video Link</a></td> 
+													<td>Log Book-Link</td>  
+													<td>Sahasra, Praseeda</td>  
+													<td><a href="TeamDetails.html"><button type="button" style="margin:0px;"  class="btn-success btn-sm"  onclick="edit(this)">View Record</button></a></td> 
+												</tr> 
+												
+											</tbody> 
+            </table>
+        </div>
+
+    </div>
+
+    <!-- <div class="container d-flex justify-content-center col-md-8">
+        <p class="dbtn">
+            <button type="button" id="signout-btn" onclick="signOutUser()" class="btn btn-danger"> SignOut </button>
+        </p>
+    </div> -->
+
+
+
+
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    
+
+</body>
+</html>

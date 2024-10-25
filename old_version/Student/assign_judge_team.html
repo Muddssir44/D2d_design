@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Add Judge</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+
+    <div class="jumbotron col-md-12">
+       <img class="card-img-top" src="images/emulogo.png" alt="logo image" style="width:100%">
+    </div>
+
+    
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Links -->
+        <ul class="navbar-nav">
+
+            <li class="nav-item">
+                <a class="nav-link" href="home.html">Home</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    View
+                </a>
+                <div class="dropdown-menu"  id="mainNavbar">
+                    <a class="dropdown-item" href="teams.html">Teams</a>
+                    <a class="dropdown-item" href="judges.html">Judges</a>
+                </div>
+            </li>
+
+            <!--<li class="nav-item">
+                <a class="nav-link" href="addStudent.html">Add Student</a>
+            </li>
+
+            <li class="nav-item" id="addAccount">
+				<a class="nav-link" href="addUser.html">Add Account</a>
+            </li>-->
+			
+			<li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Add Account
+                </a>
+                <div class="dropdown-menu"  id="mainNavbar">
+                    <a class="dropdown-item" href="addteams.html">Add Teams</a>
+                    <a class="dropdown-item" href="addjudges.html">Add Judges</a>
+                </div>
+            </li>
+			
+			<li class="nav-item">
+                <a class="nav-link" href="assign_team_judge.html">Assign Teams vs Judges</a>
+            </li>
+			
+            <li class="nav-item">
+                <button type="button" id="signout-btn" onclick="signOutUser()" style="margin-left:100px;" class="btn btn-danger"> SignOut </button>
+            </li>
+        </ul>
+    </nav>
+
+
+
+
+    <div class="container d-flex justify-content-left col-md-10">
+        <div class="col-9">
+
+            <br>
+            <h3> ADD Judge:</h3>
+            <br>
+
+            <div class="form-group">
+                <label for="studentType">Select Student Type:</label>
+                <select class="form-control" id="studentType">
+                    <option>Select student type</option>
+                    <option value="current">Current Student</option>
+                    <option value="graduated">Graduated Student</option>
+                </select>
+            </div>
+
+            <table class="table table-borderless">
+
+                <thead class="thead-dark">
+                    <tr>
+                        <th colspan="3"> Basic Information </th>
+                     </tr>
+                    </thead>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label for="email"> <b> Name: </b> </label>
+                            <input type="text" class="form-control" id="studentName" placeholder="Enter your name">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group">
+                            <label for="email"><b> Father's Name:</b></label>
+                            <input type="text" class="form-control" id="studentFN"
+                                placeholder="Enter your Father's name">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group">
+                            <label for="email"><b> Student Registration No#:</b></label>
+                            <input type="text" class="form-control" id="studentRegNo" placeholder="Enter student registration number">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <div class="form-group">
+                            <label for="email"><b>Address:</b></label>
+                            <input type="text" class="form-control" id="studentAdd"
+                                placeholder="Enter your complete address">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label for="pwd"><b>Email Address:</b></label>
+                            <input type="text" class="form-control" id="studentEmail" placeholder="Enter your email">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group">
+                            <label for="pwd"><b>Contact No:</b></label>
+                            <input type="text" class="form-control" id="studentContact"
+                                placeholder="Enter your contact number">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <div class="form-group">
+                            <label for="studentType"><b>Department:</b></label>
+                            <select class="form-control" id="SelectDepartment">
+                                <option>Select department</option>
+                                <option>Civil Engineering </option>
+                                <option>Urban Engineering </option>
+                                <option> Petroleum Engineering </option>
+                                <option> Construction Engineering </option>
+                                <option> Mechanical Engineering </option>
+                                <option> Textile Engineering </option>
+                                <option> Industrial and Manafacturing Engineering </option>
+                                <option> Automotive Engineering </option>
+                                <option> Electrical Engineering </option>
+                                <option> Computer Systems Engineering </option>
+                                <option> Electronic Engineering </option>
+                                <option> Telecommunications Engineering </option>
+                                <option> Materials Engineering </option>
+                                <option> Chemical Engineering </option>
+                                <option> Metallurgical Engineering </option>
+                                <option> Polymer & Petrochemical Engineering </option>
+                                <option> Software Engineering </option>
+                                <option> Biomedical Engineering </option>
+                                <option> Food Engineering </option>
+                                <option> Development Studies </option>
+                                <option> Management Studies </option>
+                                <option> Textile Sciences </option>
+                                <option> Computer Science & Information Technology </option>
+                                <option> Computational Finance </option>
+                                <option> Applied Physics </option>
+                                <option> Industrial Chemistry </option>
+                                <option> English Linguistics </option>
+                                <option> Economics & Finance </option>
+                                <option> Bachelor of Architecture </option>
+                            </select>
+                        </div>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <div class="form-group">
+                            <label for="comment"><b>Notes:</b></label>
+                            <textarea class="form-control" rows="5" id="notes"></textarea>
+                        </div>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label for="pwd"><b>Upload File/Photo (MAX LIMIT: 2MB)</label>
+                            <input type="file" class="form-control" id="uploadFile" multiple> <br>
+                        <button type="submit" class="btn btn-info" id="uploadButton">Upload</button>
+                        </div>
+                    </td>
+
+                    <td>
+                        <p id="uploadStatus"></p>
+                    </td>
+                
+                    
+                    <td>
+                        <table class="table tableUpload" style="display:none;">
+                            <thead class="thead-dark" id="table">
+                                <tr>
+                                    <th scope="col">File Name </th>
+                                    <th scope="col">Status</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </td>
+                
+                </tr>
+
+            </table>
+
+            <!-- Basic Requirments for students ends here -->
+
+
+
+
+            <!-- Requirments for current students -->
+
+            <table class="table table-borderless currentShow" style="display:none;" >
+
+                <thead class="thead-dark">
+                    <tr>
+                        <th colspan="3"> Scholarship details. </th>
+                     </tr>
+                    </thead>
+
+                <tr>
+                    <td>
+                        <div class="form-group currentShow" style="display:none;">
+                            <label for="email"><b>Year of Admission in NED:</b></label>
+                            <input type="text" class="form-control" id="yearOfAdmissionInNed"
+                                placeholder="Year of Admission In NED">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group currentShow" style="display:none;">
+                            <label for="email"><b>University Roll No#/Batch:</b></label>
+                            <input type="text" class="form-control" id="studentRoll" placeholder="Enter your Roll No">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group currentShow" style="display:none;">
+                            <label for="email"><b>No of Siblings:</b></label>
+                            <input type="text" class="form-control" id="noOfSiblings" placeholder="Enter total no of siblings">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group currentShow" style="display:none;">
+                            <label for="studentType"><b>Orphan:</b></label>
+                            <select class="form-control" id="orphan">
+                                <option>Select yes or no</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group" style="display:none;" id="orphanConditionSelect">
+                            <label for="studentType"><b>Select your living parent:</b></label>
+                            <select class="form-control" id="ifOrphan">
+                                <option>Select your living parent</option>
+                                <option value="None">None</option>
+                                <option value="Mother">Mother</option>
+                                <option value="Father">Father</option>
+                            </select>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group currentlyLivingWith" style="display:none;">
+                            <label for="pwd"><b>Currently Living with:</b></label>
+                            <input type="text" class="form-control" id="currentlyLivingWith"
+                                placeholder="Enter whom you are currently living with.">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group currentShow" style="display:none;">
+                            <label for="pwd"><b>Parent's Monthly Income:</b></label>
+                            <input type="text" class="form-control" id="monthlyIncomeParents"
+                                placeholder="Enter your parent's monthly income.">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group currentShow" style="display:none;">
+                            <label for="studentType"><b>House Type:</b></label>
+                            <select class="form-control" id="houseType">
+                                <option>Select your house type</option>
+                                <option value="Own">Own</option>
+                                <option value="Rent">Rent</option>
+                                <option value="Combined Family">Combined Family</option>
+                            </select>
+                        </div>
+
+                    </td>
+
+                    <td>
+                        <div class="form-group" id="mRent" style="display: none;">
+                            <label for="pwd"><b>Monthly Rent:</b></label>
+                            <input type="text" class="form-control" id="monthlyRent"
+                                placeholder="Enter your monthly house rent">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group currentShow" style="display:none;">
+                            <label for="pwd"><b>Years Scholarship awarded:</b></label>
+                            <input type="text" class="form-control" id="scholarshipAwardYear"
+                                placeholder="Enter scholarship award year">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group currentShow" style="display:none;">
+                            <label for="pwd"><b>Amount:</b></label>
+                            <input type="text" class="form-control" id="amount"
+                                placeholder="Enter total amount awarded">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group currentShow" style="display:none;">
+                            <label for="studentType"><b>Year</b></label>
+                            <select class="form-control" id="year">
+                                <option>FE</option>
+                                <option>SE</option>
+                                <option>TE</option>
+                                <option>BE</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr> 
+                    <td>
+                    <div class="form-group currentShow" style="display:none;">
+                        <label for="pwd"><b>Extra Amount:</b></label>
+                        <input type="text" class="form-control" id="extraAmount"
+                            placeholder="Enter any extra amount awarded">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group currentShow" style="display:none;">
+                            <label for="pwd"><b>Date:</b></label>
+                            <input type="text" class="form-control" id="dateOfExtraAmount"
+                                placeholder="Enter date e.g: 20/10/2019">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group currentShow" style="display:none;">
+                            <label for="pwd"><b>Extra Amount Note:</b></label>
+                            <input type="text" class="form-control" id="extraAmountNote"
+                                placeholder="Enter notes for extra amount">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">
+                        <button type="button" onclick="renewalInformationS1()" id="buttonS"
+                            class="btn btn-secondary col-md-5">Add Renewal Information</button>
+                    </td>
+
+                </tr>
+
+                <!-- S1 Starts Here -->
+
+                <thead class="thead-dark dataS1" style="display: none;">
+                    <tr>
+                        <th colspan="3"> Scholarship renewal information. </th>
+                     </tr>
+                    </thead>
+
+                <tr>
+                    <td>
+                        <div class="form-group dataS1" style="display:none;">
+                            <label for="pwd"><b>Years Scholarship awarded:</b></label>
+                            <input type="text" class="form-control" id="scholarshipAwardYearS1"
+                                placeholder="Enter scholarship award year">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group dataS1" style="display:none;">
+                            <label for="pwd"><b>Amount:</b></label>
+                            <input type="text" class="form-control" id="amountS1"
+                                placeholder="Enter total amount awarded">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group dataS1" style="display:none;">
+                            <label for="studentType"><b>Year</b></label>
+                            <select class="form-control" id="yearS1">
+                                <option>FE</option>
+                                <option>SE</option>
+                                <option>TE</option>
+                                <option>BE</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group dataS1" style="display:none;">
+                            <label for="pwd"><b>Extra Amount:</b></label>
+                            <input type="text" class="form-control" id="extraAmountS1"
+                                placeholder="Enter any extra amount awarded">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">
+                        <button type="button" onclick="renewalInformationS2()" id="buttonS2"
+                            class="btn btn-secondary col-md-5 dataS1"  style="display: none;">Add Renewal Information</button>
+                    </td>
+                </tr>
+
+                <!-- S2 Starts Here -->
+                <tr>
+                    <td>
+                        <div class="form-group dataS2" style="display:none;">
+                            <label for="pwd"><b>Years Scholarship awarded:</b></label>
+                            <input type="text" class="form-control" id="scholarshipAwardYearS2"
+                                placeholder="Enter scholarship award year">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group dataS2" style="display:none;">
+                            <label for="pwd"><b>Amount:</b></label>
+                            <input type="text" class="form-control" id="amountS2"
+                                placeholder="Enter total amount awarded">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group dataS2" style="display:none;">
+                            <label for="studentType"><b>Year</b></label>
+                            <select class="form-control" id="yearS2">
+                                <option>FE</option>
+                                <option>SE</option>
+                                <option>TE</option>
+                                <option>BE</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group dataS2" style="display:none;">
+                            <label for="pwd"><b>Extra Amount:</b></label>
+                            <input type="text" class="form-control" id="extraAmountS2"
+                                placeholder="Enter any extra amount awarded">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">
+                        <button type="button" onclick="renewalInformationS3()" id="buttonS3"
+                            class="btn btn-secondary col-md-5 dataS2"  style="display: none;">Add Renewal Information</button>
+                    </td>
+                </tr>
+
+                <!-- S3 Starts Here -->
+                <tr>
+                    <td> 
+                        <div class="form-group dataS3" style="display:none;">
+                            <label for="pwd"><b>Years Scholarship awarded:</b></label>
+                            <input type="text" class="form-control" id="scholarshipAwardYearS3"
+                                placeholder="Enter scholarship award year">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group dataS3" style="display:none;">
+                            <label for="pwd"><b>Amount:</b></label>
+                            <input type="text" class="form-control" id="amountS3"
+                                placeholder="Enter total amount awarded">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group dataS3" style="display:none;">
+                            <label for="studentType"><b>Year</b></label>
+                            <select class="form-control" id="yearS3">
+                                <option>FE</option>
+                                <option>SE</option>
+                                <option>TE</option>
+                                <option>BE</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group dataS3" style="display:none;">
+                            <label for="pwd"><b>Extra Amount:</b></label>
+                            <input type="text" class="form-control" id="extraAmountS3"
+                                placeholder="Enter any extra amount awarded">
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+
+            <!-- Graduated students requirments starts here -->
+
+            <table class="table table-borderless gradShow" style="display:none;">
+
+                <thead class="thead-dark gradShow" style="display: none;">
+                    <tr>
+                        <th colspan="3"> Graduation details. </th>
+                     </tr>
+                    </thead>
+
+                <tr>
+                    <td colspan="2">
+                        <div class="form-group gradShow" style="display:none;">
+                            <label for="pwd"><b>Year of graduation:</b></label>
+                            <input type="text" class="form-control" id="yearOfGraduation"
+                                placeholder="Enter year of graduation">
+                        </div>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td colspan="2">
+                        <div class="form-group gradShow" style="display:none;">
+                            <label for="pwd"><b>Internships:</b></label>
+                            <input type="text" class="form-control" id="internships"
+                                placeholder="For more than one internships seperate by comma. E.g KE, Wapda">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group gradShow" style="display:none;">
+                            <label for="pwd"><b>Current Company Name:</b></label>
+                            <input type="text" class="form-control" id="currentCompanyName"
+                                placeholder="Enter your current company name">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group gradShow" style="display:none;">
+                            <label for="pwd"><b>Current Company Salary:</b></label>
+                            <input type="text" class="form-control" id="currentCompanySalary"
+                                placeholder="Enter current company salary">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group gradShow" style="display:none;">
+                            <label for="pwd"><b>Past company name:</b></label>
+                            <input type="text" class="form-control" id="pastCompanyName"
+                                placeholder="for more than 1 company, seperate names with comma. e.g KE, Wapda">
+                        </div>
+                    </td>
+
+                    <td>
+
+                        <div class="form-group gradShow" style="display:none;">
+                            <label for="pwd"><b>Past Company Salary:</b></label>
+                            <input type="text" class="form-control" id="pastCompanySalary"
+                                placeholder="Enter past company salary">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group gradShow" style="display:none;">
+                            <label for="marriage"><b>Married:</b></label>
+                            <select class="form-control" id="married">
+                                <option>Select</option>
+                                <option value="yes">yes</option>
+                                <option value="no">no</option>
+                            </select>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group" style="display:none;" id="marriedAns">
+                            <label for="pwd"><b>Enter year of marriage:</b></label>
+                            <input type="text" class="form-control" id="yearOfMarriage" placeholder="Enter year of marriage">
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+
+            <div id="alertBox"> </div>
+            <button type="submit" class="btn btn-primary" id="formSubmit">Submit</button>
+        </div>
+    </div>
+
+    <!-- <div class="container d-flex justify-content-center col-md-8">
+        <p class="dbtn">
+            <button type="button" id="signout-btn" onclick="signOutUser()" class="btn btn-danger"> SignOut </button>
+        </p>
+    </div> -->
+
+
+
+
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-storage.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+</body>
+<script src="js/addStudent.js"></script>
+<script src="js/general.js"></script>
+</html>
