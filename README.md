@@ -1,5 +1,3 @@
-readme me ye dalde 
-
 Dare2Design PHP Website
 
 This is a PHP-based website developed for Dare2Design. Follow the instructions below to set up the environment and run the project locally.
